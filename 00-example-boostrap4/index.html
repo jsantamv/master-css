@@ -24,9 +24,22 @@
         Launch demo modal
       </button>
 
+      <button type="button" class="btn btn-secondary" onclick="miFunction()">Testing</button>
+
+
+      <script>
+        const miFunction = () => {
+          try {
+            nonExistentFunction();
+          } catch (error) {
+            console.error(miFunction.name, error.message);
+          }
+        };
+
+      </script>
       <!-- Modal -->
-      <div class="modal modal-landscape center fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
+      <div class=" modal modal-landscape center fade" id="exampleModalLong" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -36,7 +49,7 @@
               </button>
             </div>
             <div class="modal-body">
-              
+
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary btn-primary-landscape">Depsit</button>
