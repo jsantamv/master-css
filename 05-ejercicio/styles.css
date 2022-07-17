@@ -109,3 +109,45 @@ footer {
     color: #444;
     border-top: 1px solid #ccc;
 }
+
+
+/* Posiont Aboslute */
+
+.libre{
+    background: #ccc;
+    background-color: red;
+    border: 1px solid black;
+    color: rgb(245, 234, 234);    
+    height: 50px;
+    width: 50px;
+
+    /* con la posisicon absoluta puedo poner donde yo quiera un elemento */
+    position: absolute;
+    top : 300px;
+    left: 50%;
+    right: 50%;
+}
+
+.libre2 {
+    /* el z-index: me indica quien esta encima de la otra; */
+    background-color: green;
+    top: 280px;
+    z-index: 1;
+}
+
+/* pistion fixed */
+
+.fija {
+    background: #ccc;
+    background-color: rgb(7, 62, 242);
+    border: 1px solid black;
+    color: rgb(245, 234, 234);    
+    height: 50px;
+    width: 50px;
+
+    /* con la posisicon FIXED Siempre estoy en una posicion fija */
+    position: fixed;
+    top : 300px;
+    left: 0%;
+    right: 50%;
+}
