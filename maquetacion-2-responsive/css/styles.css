@@ -68,10 +68,18 @@ header {
     margin-left: 20px;
     letter-spacing: 1px;
     background-color: #37bcf9;
+    border-radius: 5px;
     cursor: pointer;
     overflow: hidden;
     transition: all 300ms;
 }
+
+#logo:hover {
+    background-color: #139edf;
+    color: black;
+    border-radius: 10px;
+}
+
 
 #logo .gear {
     display: block;
@@ -79,6 +87,38 @@ header {
     font-size: 30px;
     margin-top: 8px;
     margin-left: 26px;
+    animation-name: "rotate-gear";
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+#logo:hover .gear {
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes fromBellow {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(200%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 #logo h3 {
@@ -88,6 +128,20 @@ header {
     margin-top: 5px;
     margin-right: 65px;
     transition: all 300ms;
+}
+
+#logo:hover h3 {
+    animation: fromRigth 300ms linear;
+}
+
+@keyframes fromRigth {
+    from {
+        transform: translateX(200%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
 }
 
 #menu {
@@ -123,10 +177,21 @@ header {
     border: 10px solid white;
     box-shadow: 0px 0px 2px #37bcf9;
     background: url('../img/bakbaner.png');
-    background-position: -200px -400px;
+    background-position: -200px -200px;
     margin: 20px;
-    ;
     border-radius: 10px;
+    overflow: hidden;
+    animation: back-banner 3s linear;
+}
+
+@keyframes back-banner {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: -200px -200px;
+    }
 }
 
 #banner h1 {
@@ -136,10 +201,39 @@ header {
     color: white;
     font-size: 35px;
     font-weight: normal;
-    text-shadow: 2px 2px 1px black;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 1px black;
     margin: 30px auto;
+    animation: show-text 3s linear;
 }
+
+
+@keyframes show-text {
+    0% {
+        transform: translateX(-600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(600%) scale(5, 5);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-600%) scale(5, 5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%) scale(1, 1);
+        opacity: 1;
+        text-shadow: 2px 2px 1px black;
+        color: white;
+    }
+}
+
 
 /* formas para las tarjetas */
 
@@ -155,6 +249,11 @@ header {
     margin: 22px;
     margin-top: 40px;
     border-radius: 10px;
+    transition: all 300ms;
+}
+
+.card:hover {
+    background: black;
 }
 
 /* para la ultima tarjeta */
@@ -171,6 +270,23 @@ header {
     text-align: center;
     margin: 0px auto;
     color: #073b55;
+    transition: all 300ms;
+}
+
+.card:hover .icon {
+    font-size: 60px;
+    color: #0088f8;
+    animation: show-icon 300ms linear;
+}
+
+@keyframes show-icon {
+    from {
+        transform: translateY(-200%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
 }
 
 .card .category {
@@ -181,12 +297,48 @@ header {
     font-weight: bold;
     text-align: center;
     color: #085b81;
+    transition: all 300ms;
+}
+
+.card:hover .category {
+    color: white;
+    animation: show-category 400ms linear;
+}
+
+@keyframes show-category {
+    from {
+        transform: translateY(-300%);
+        color: black;
+    }
+
+    to {
+        transform: translateY(0%);
+        color: white;
+    }
 }
 
 .card .description {
     color: #087bb1;
     text-align: center;
     font-family: "TrebuchetMS";
+    transition: all 300ms;
+}
+
+.card:hover .description {
+    color: white;
+    animation: show-description 400ms linear;
+}
+
+@keyframes show-description {
+    from {
+        transform: translateX(-300%);
+        color: black;
+    }
+
+    to {
+        transform: translateX(0%);
+        color: white;
+    }
 }
 
 /* BARRA LATERAL */
@@ -358,6 +510,32 @@ aside h3:first-child {
     height: 215px;
 }
 
+#social .overlay {
+    display: block;
+    height: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    border: 1px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background: #f4f7fE;
+    position: absolute;
+    padding: 5px;
+    margin-left: 70px;
+    margin-top: -55px;
+    cursor: pointer;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+    color: #0088f8;
+}
+
+#social div:hover .overlay {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
 #social a {
     display: block;
     color: #333;
@@ -366,6 +544,11 @@ aside h3:first-child {
     margin-left: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+#social a:hover {
+    color: #0088f8;
+
 }
 
 /* secion de articles */
@@ -448,6 +631,7 @@ aside h3:first-child {
     margin-top: 60px;
     line-height: 100px;
     text-align: center;
+    transition: all 1s;
 }
 
 #blog a {
@@ -455,11 +639,134 @@ aside h3:first-child {
     font-family: "BebasNeue";
     font-size: 40px;
     letter-spacing: 3px;
-    color: #0088f8;
+    color: white !important;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+#blog:hover {
+    background-color: #555;    
+    border: 10px solid #0088f8;
+    border-radius: 240px;
+    box-shadow: 0px 0px 10px #ccc;
+    animation: blink 10s infinite linear;
+}
+
+#blog:hover a {
+    color: white;
+    text-shadow: 1px 1px 1px black,
+        1px 2px 1px black,
+        1px 3px 1px black,
+        1px 4px 1px black,
+        1px 5px 1px black,
+        1px 6px 1px black;
+}
+
+@keyframes blink {
+    0% {
+        border: 10px solid #0088f8;
+    }
+
+    25% {
+        border: 10px solid green;
+    }
+
+    50% {
+        border: 10px solid yellow;
+    }
+
+    75% {
+        border: 10px solid white;
+    }
+
+    100% {
+        border: 10px solid #0088f8;
+    }
+}
+
+/* ESTILOS PARA EL footer */
+#footer {
+    width: 100%;
+    height: 430px;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+#footer>.wrap>div {
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: white;
+    font-family: "TrebuchetMS";
+}
+
+#footer a {
+    text-decoration: none;
+    color: #37bcf9;
     transition: all 300ms;
 }
 
-#blog a:hover {
+#footer a:hover {
     text-decoration: underline;
     color: #055da5;
+}
+
+#footer h5 {
+    display: block;
+    background: url("../img/pxgray.png") white;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 40px;
+    line-height: 55px;
+    color: black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#footer ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#footer ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+#footer ul li a {
+    display: block;
+    height: 40px;
+    transition: all 300ms;
+}
+
+#footer ul li:hover a {
+    padding-left: 40px;
+    COLOR: white;
+    width: 100%;
+}
+
+#footer iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 5px solid white;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#footer img {
+    margin-bottom: 15px;
+}
+
+#footer #browsers img {
+    width: 45px;
 }
