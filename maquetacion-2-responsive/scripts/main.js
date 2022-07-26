@@ -30,11 +30,9 @@ const filParagraphs = async () => {
 
 }
 
-window.addEventListener('load', async (event) => {
-    
+window.addEventListener('load', async (event) => {    
     await filParagraphs();
     resolution();
-
     console.log('page is fully loaded', event);
 });
 
