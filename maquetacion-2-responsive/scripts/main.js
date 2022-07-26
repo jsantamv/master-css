@@ -1,3 +1,5 @@
+import { firstModule } from '../modules/firsmodule.js';
+
 
 const resolution = () => {
     const newWidth = window.innerWidth;
@@ -34,6 +36,8 @@ window.addEventListener('load', async (event) => {
     await filParagraphs();
     resolution();
     console.log('page is fully loaded', event);
+
+    firstModule();
 });
 
 window.addEventListener('resize', () => {
