@@ -1,0 +1,139 @@
+@media (max-width:1250px) {
+    .wrap {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 17%;
+        margin: 1.4%;
+    }
+
+    #articles {
+        width: 60%;
+    }
+
+    #articles article {
+        width: 97%;
+    }
+
+    .card {
+        width: 17%;
+        margin: 1.4%;
+    }
+
+    .card .category {
+        margin-bottom: 20px;
+    }
+
+    .card .p {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #footer>.wrap>div {
+        width: 25%;
+        margin: 4%;
+    }
+
+    #footer #browsers img {
+        width: 14%
+    }
+
+    #footer h5 {
+        font-size: 30px;
+    }
+
+    #banner h1 {
+        width: 100%;        
+        text-align: center;
+        font-size: 30px;
+        margin: 33px auto;
+    }
+}
+
+@media (max-width:945px) {
+    .card .category {
+        font-size: 17px;
+    }
+
+    .card .description {
+        font-size: 14px;
+    }
+
+    #articles {
+        width: 58%;
+    }
+
+    #footer h5 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width:945px) {
+    .card .category {
+        font-size: 17px;
+    }
+
+    .card .description {
+        font-size: 14px;
+    }
+
+    #articles {
+        width: 64%;
+    }
+
+    #lateral {
+        width: 30%;
+    }
+
+    #lateral input[type="text"] {
+        width: 83%;
+    }
+
+    #login input[type="mail"],
+    #login input[type="password"] {
+        width: 75%;
+    }
+
+    .aside-box {
+        width: 96%;
+        height: 20%;
+        margin-left: 11px;
+    }
+
+    #login input[type="button"],
+    #login input[type="submit"],
+    #login input[type="reset"],
+    #login button {
+        margin-top: 8px;
+        margin-bottom: 4px;
+        width: 87%;
+    }
+
+    aside h3 {
+        margin-left: 11px;
+    }
+
+    #footer img {     
+        width: 95%;
+    } 
+
+    #footer > .wrap > div {
+        width: 26%;
+        margin: 24px;
+    }
+
+    #social .overlay {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:989px) {
+
+    #lateral h3 {
+        font-size: 20px;
+    }
+}

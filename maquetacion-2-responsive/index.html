@@ -8,6 +8,7 @@
     <title>Maquetacion de CSS Responsive</title>
     <link rel="shortcut icon" href="./img/supertux.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
 <body>
@@ -83,12 +84,13 @@
             <!-- FIN DE CARDS -->
 
             <!-- INICIO DE BARRA LATERAL -->
+            <div class="clearfix"></div>
             <aside id="lateral">
                 <h3>Buscar</h3>
 
                 <div id="search">
                     <form>
-                        <input type="text" />
+                        <input id="txtSearch" type="text" />
                         <input type="button" class="icon" value="L" />
                     </form>
                 </div>
@@ -152,28 +154,7 @@
                     </div>
 
                     <h4><a href="#">Titulo del articulo</a></h4>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-                        Donec euismod, nisl eget consectetur sagittis, nisl
-                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
-
-                    </p>
+                    <p id="deviceType"></p>
                 </article>
 
                 <article>
@@ -344,7 +325,7 @@
                     <img src="./img/ios.png" alt="ios" title="ios">
                 </p>
 
-                <h5>Autor</h5>                
+                <h5>Autor</h5>
                 <p>&copy; Jsantamaria <a href="#">devteamcr.com</a></p>
             </div>
 
@@ -354,8 +335,14 @@
     </footer>
     <!-- FIN PIE DE PAGINA -->
 
-
-
+    <script>
+        window.addEventListener('resize', () => {
+            const newWidth = window.innerWidth;
+            const newHeight = window.innerHeight;
+            const result = `Width: ${newWidth} Height: ${newHeight}`;
+            document.getElementById('txtSearch').value = result;
+            document.getElementById('deviceType').textContent = `Resolucion ${result} Navegador: \n${navigator.userAgent}`
+        });
+    </script>
 </body>
-
 </html>
