@@ -131,9 +131,15 @@
     }
 }
 
-@media (max-width:989px) {
+@media (max-width:899px) {
 
     #lateral h3 {
         font-size: 20px;
     }
+}
+
+
+@media (max-width:799px) {
+
+    #banner 
 }

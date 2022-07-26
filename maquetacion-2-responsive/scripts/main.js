@@ -1,6 +1,6 @@
 import { filParagraphs, resolution } from '../modules/fillDataHtml.js';
 
-window.addEventListener('load', async (event) => {    
+window.addEventListener('DOMContentLoaded', async (event) => {    
     await filParagraphs();    
     resolution();
 });
