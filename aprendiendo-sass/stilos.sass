@@ -1,13 +1,32 @@
 $fuente-tipica: Helvetica, Arial, sans-serif
 $color-fondo: #ccc
 $color-letra: red
+$color-secondario: #190ae7
 
 body
     background-color: $color-fondo
-
     h1
         color: $color-letra
         font-family: $fuente-tipica
-
     p
-        color: $color-letra
+        color: $color-secondario
+
+.caja
+    border: 1px solid black
+    width: 500px
+    margin: 0 auto
+    text-align: center
+    background-color: white
+    padding: 10px
+    h1
+        color: green
+    p
+        color: black
+    
+    .info
+        font-size: 10px
+        .autor
+            float: left
+            font-size: 15px
+            color: orange
+            

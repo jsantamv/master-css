@@ -6,7 +6,30 @@ body h1 {
   font-family: Helvetica, Arial, sans-serif;
 }
 body p {
-  color: red;
+  color: #190ae7;
+}
+
+.caja {
+  border: 1px solid black;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+.caja h1 {
+  color: green;
+}
+.caja p {
+  color: black;
+}
+.caja .info {
+  font-size: 10px;
+}
+.caja .info .autor {
+  float: left;
+  font-size: 15px;
+  color: orange;
 }
 
 /*# sourceMappingURL=styles.css.map */
