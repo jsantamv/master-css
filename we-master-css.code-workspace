@@ -7,5 +7,7 @@
 			"path": "maquetacion-2-responsive"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "maquetacion-2-responsive"
+	}
 }
