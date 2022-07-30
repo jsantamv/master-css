@@ -7,3 +7,9 @@ export const devicesTypeIOS = () => {
 
     console.log(result, name, deviceType);
 }
+
+export const callAppFetch = async () => {
+    let result = await fetch('https://jsonplaceholder.typicode.com/users')
+    let data = await result.json()
+    console.log(data);
+}
