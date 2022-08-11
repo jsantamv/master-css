@@ -16,3 +16,12 @@ export const filParagraphs = async () => {
   document.getElementById('bacon-ipsum2').textContent = result[1];
   document.getElementById('bacon-ipsum3').textContent = result[2];
 }
+
+
+export const resolution2 = () => {
+  const newWidth = window.innerWidth;
+  const newHeight = window.innerHeight;
+  const result = `Width: ${newWidth} Height: ${newHeight}`;
+  const deviceType = navigator.userAgent;  
+  document.getElementById('deviceType').textContent = `Resolucion ${result} Navegador: ${deviceType}`
+}

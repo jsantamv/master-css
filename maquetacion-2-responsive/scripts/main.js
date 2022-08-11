@@ -1,4 +1,4 @@
-import { filParagraphs, resolution } from '../modules/fillDataHtml.js';
+import { filParagraphs, resolution, resolution2 } from '../modules/fillDataHtml.js';
 import { devicesTypeIOS, callAppFetch } from '../modules/devices.js';
 
 window.addEventListener('DOMContentLoaded', async (event) => {
@@ -11,3 +11,4 @@ window.addEventListener('resize', () => {
     resolution();
     devicesTypeIOS();
 });
+
