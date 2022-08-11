@@ -10,20 +10,17 @@
 
 <body>
 
-    <div>        
-        <p id="onload"></p>
-        <h1 id="responsive">Responsive: </h1>
-        
-        <div>
-            <h2 id="orientation"></h2>
-        </div>
-
+    <div>
+        <h1 id="onload">EVENT: </h1>
+        <h2 id="responsive">Responsive: </h2>
+        <h2 id="orientation">Orientation: </h2>
+        <h3 id="screen-type">Grados: --</h3>
         <p id="deviceType"></p>
 
     </div>
 
 
-    <script>       
+    <script>
 
         const resol = () => {
             const newWidth = window.innerWidth;
@@ -36,54 +33,52 @@
             const mediaQueryList = window.matchMedia("(orientation: portrait)");
 
             if (mediaQueryList.matches) {
-                /* The viewport is currently in portrait orientation */                
+                /* The viewport is currently in portrait orientation */
                 document.getElementById('orientation').textContent = `Orientation: portrait |`
                 //to do portrait
             } else {
-                /* The viewport is not currently in portrait orientation, therefore landscape */                
+                /* The viewport is not currently in portrait orientation, therefore landscape */
                 document.getElementById('orientation').textContent = `Orientation: landscape ---`
                 // to do landscape
             }
         }
 
 
-        const doOnOrientationChange = () => {
-            let _orn = screen.msOrientation || (screen.orientation || screen.mozOrientation || screen.webkitOrientation).type;         
-
-            switch (_orn) {
-                case 'landscape-primary':
-                    landscapeScreen();
+        const windowOrientation = () => {
+            switch (window.orientation) {
+                case -90:
+                    console.log(`landscapeScreen()`);
                     break;
-                case 'landscape-secondary':
-                    landscapeScreen();
-                    break;
-                case 'portrait-primary':
-                    portraitScreen();
-                    break;
-                case 'portrait-secondary':
-                    portraitScreen();
-                    break;
-                case undefined:
-                    console.warn(doOnOrientationChange.name, 'undefined');
-                    alert(`orientation type undefined`)
-                    portraitScreen();
+                case 90:
+                    console.log(`landscapeScreen()`);
                     break;
                 default:
-                    portraitScreen();
+                    console.log(`portraitScreen()`);
                     break;
             }
+
+            document.getElementById('screen-type').textContent = `EVENT orientationchange Grados ${window.orientation}`
+
+        }
+
+        const doOnOrientationChange = () => {
+            windowOrientation();
         };
 
         //Listen to orientation change or resize
-        window.addEventListener('orientationchange', doOnOrientationChange);
+        window.addEventListener('orientationchange', () => {
+            doOnOrientationChange();
+        })
 
-        window.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('onload').textContent = `EVENT: DOMContentLoaded event`
+        // window.addEventListener('DOMContentLoaded', () => {
+        window.addEventListener('load', () => {
+            //'load'
+            document.getElementById('onload').textContent = `EVENT: load`
             resol();
         });
 
         window.addEventListener('resize', () => {
-            document.getElementById('onload').textContent = `EVENT: resize event`
+            document.getElementById('onload').textContent = `EVENT: resize`
             resol();
         });
 
