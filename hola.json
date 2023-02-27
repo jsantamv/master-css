@@ -1,0 +1,97 @@
+MarketsJson
+[
+    {
+        "Id": 1041966,
+        "Criterion": [
+            {
+                "id": 1,
+                "label": "MoneyLine"
+            }
+        ],
+        "EventId": 1041966,
+        "Outcomes": [
+            {
+                "Id": 102,
+                "Label": "GB PACKERS",
+                "odds": "-110",
+                "betOffer_id": 1041966,
+                "status": "OPEN",
+                "EventId": 1041966,
+                "GamePlace": "HOME"
+            },
+            {
+                "Id": 101,
+                "Label": "CHI BEARS",
+                "odds": "-110",
+                "betOffer_id": 1041966,
+                "status": "OPEN",
+                "EventId": 1041966,
+                "GamePlace": "VISTOR"
+            }
+        ]
+    },
+    {
+        "Id": 1041966,
+        "Criterion": [
+            {
+                "id": 2,
+                "label": "Spread"
+            }
+        ],
+        "EventId": 1041966,
+        "Outcomes": [
+            {
+                "Id": 102,
+                "Label": "GB PACKERS",
+                "odds": "-110",
+                "betOffer_id": 1041966,
+                "Line": -5.00,
+                "status": "OPEN",
+                "EventId": 1041966,
+                "GamePlace": "HOME"
+            },
+            {
+                "Id": 101,
+                "Label": "CHI BEARS",
+                "odds": "-110",
+                "betOffer_id": 1041966,
+                "Line": 5.00,
+                "status": "OPEN",
+                "EventId": 1041966,
+                "GamePlace": "VISTOR"
+            }
+        ]
+    },
+    {
+        "Id": 1041966,
+        "Criterion": [
+            {
+                "id": 3,
+                "label": "Total"
+            }
+        ],
+        "EventId": 1041966,
+        "Outcomes": [
+            {
+                "Id": 102,
+                "Label": "GB PACKERS",
+                "odds": "-110",
+                "betOffer_id": 1041966,
+                "Line": 50.50,
+                "status": "OPEN",
+                "EventId": 1041966,
+                "GamePlace": "HOME"
+            },
+            {
+                "Id": 101,
+                "Label": "CHI BEARS",
+                "odds": "-110",
+                "betOffer_id": 1041966,
+                "Line": 50.50,
+                "status": "OPEN",
+                "EventId": 1041966,
+                "GamePlace": "VISTOR"
+            }
+        ]
+    }
+]
