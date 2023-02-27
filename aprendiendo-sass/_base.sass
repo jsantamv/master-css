@@ -1,8 +1,14 @@
+//Variables
 $fuente-tipica: Helvetica, Arial, sans-serif
-$color-fondo: #ccc
+$color-fondo: #fafafa
 $color-letra: red
 $color-secondario: #190ae7
 
+//limpiar estilos
+.clearfix
+    clear: both
+
+//use de variables
 body
     background-color: $color-fondo
     h1
@@ -11,6 +17,7 @@ body
     p
         color: $color-secondario
 
+//anidacion
 .caja
     border: 1px solid black
     width: 500px
@@ -29,3 +36,78 @@ body
             float: left
             font-size: 15px
             color: orange
+
+//Mixins  / Funciones
+@mixin crearBordes()
+    border: 5px solid red
+    border-radius: 10px
+    box-shadow: 0px 0px 5px black
+
+@mixin crearBordesParam($color, $size, $shadow)
+    border: 5px solid $color
+    border-radius: $size
+    box-shadow: 0px 0px $size $shadow
+
+.span-alert
+    font-weight: bold
+    text-transform: capitalize
+
+.caja
+    @include crearBordesParam($color:green , $size:10px , $shadow: yellow )
+
+.listado
+    @include crearBordesParam($color:green , $size:10px , $shadow: black )
+
+// Herencia
+%alert-normal
+    background: #e1e4e1
+    border: 1px solid #777676
+    margin: 10px auto
+    padding: 5px
+    width: 80%
+
+.alert
+    @extend %alert-normal
+
+.alert-danger
+    @extend %alert-normal
+    color: red
+    border-color: red
+
+.alert-success
+    @extend %alert-normal
+    color: green
+    border-color: green
+
+// Operadores 
+//Operaciones matematicas
+h1
+    font-size: 20px + 5px - 1px
+
+$caja: 200px
+$wrap: 900px
+
+.cajas
+    width: $wrap
+    margin: 0px auto
+
+.caja
+    float: left
+    width:  calc($caja / $wrap) * 100%
+    margin: 10px
+
+//Condicionales if
+h1
+    @if $color-fondo == #ccc
+        color: black !important
+    @else
+        color: salmon
+
+//Condicionales for
+
+  
+
+     
+//Condicionales each
+
+//Condicionales while

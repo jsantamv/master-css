@@ -1,5 +1,9 @@
+.clearfix {
+  clear: both;
+}
+
 body {
-  background-color: #ccc;
+  background-color: #fafafa;
 }
 body h1 {
   color: red;
@@ -30,6 +34,60 @@ body p {
   float: left;
   font-size: 15px;
   color: orange;
+}
+
+.span-alert {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.caja {
+  border: 5px solid green;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px yellow;
+}
+
+.listado {
+  border: 5px solid green;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.alert-success, .alert-danger, .alert {
+  background: #e1e4e1;
+  border: 1px solid #777676;
+  margin: 10px auto;
+  padding: 5px;
+  width: 80%;
+}
+
+.alert-danger {
+  color: red;
+  border-color: red;
+}
+
+.alert-success {
+  color: green;
+  border-color: green;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.cajas {
+  width: 900px;
+  margin: 0px auto;
+}
+
+.caja {
+  float: left;
+  width: 22.2222222222%;
+  margin: 10px;
+}
+
+h1 {
+  color: salmon;
 }
 
 h1 {
