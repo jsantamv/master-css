@@ -4,10 +4,12 @@ body{
 }
 
 #layout {
-    
-    /* display: flex; */
     display: inline-flex;
-
+    /*
+    flex-direction: row;
+    flex-wrap: wrap;
+    la unificamos en una sola lina */
+    flex-flow: row wrap;
 
     border: 3px solid black;
     width: auto;
