@@ -1,0 +1,58 @@
+@bg-color: lightskyblue;
+@font: Arial;
+@b: body;
+
+@{b} {
+    background: @bg-color;
+}
+
+h1 {
+    font-family: @font;
+}
+
+//anidacion
+.info {
+    ul {
+        a {
+            color: black;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    }
+}
+
+//Mixin
+.sombras(@size) {
+    box-shadow: 0px 0px @size black;
+    text-shadow: 0px 0px 5px gray;
+}
+
+.info {
+    .sombras(5px);
+}
+
+//Operadores
+h1 {
+    font-size: 30px + 7px;
+}
+
+//Mixins condicionales
+.textoNegro(@value) when (@value =negro) {
+    color: black;
+}
+
+h1 {
+    color: blue;
+    .textoNegro(balc)
+}
+
+//bucles
+.loop(@i) when (@i > 0) {
+    .loop((@i - 1));
+    height: ((900px / @i ))
+}
+
+.info {
+    height: 200px;
+    .loop(5)
+}
